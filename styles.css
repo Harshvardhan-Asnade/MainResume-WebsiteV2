@@ -195,19 +195,20 @@ body {
 }
 
 /* === HERO SECTION === */
+/* === HERO SECTION === */
 .hero {
   min-height: calc(100vh - 5rem);
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
   align-items: center;
-  padding: 4rem 0;
+  padding: 4rem 1rem;
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem; /* Reduced gap between elements */
 }
 
 .hero-image {
@@ -215,33 +216,112 @@ body {
 }
 
 .hero-image img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
   animation: float 6s ease-in-out infinite;
 }
 
 .title {
-  font-size: clamp(2.5rem, 8vw, 4rem);
-  font-weight: 700;
-  line-height: 1.1;
+  font-size: clamp(2.5rem, 6vw, 3rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 0; /* Ensure no bottom margin */
 }
+
 
 .title span {
   display: block;
   color: var(--color-primary);
 }
 
+.loader {
+  color: rgb(124, 124, 124);
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+  font-size: 25px;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 40px;
+  display: flex;
+ 
+  position: relative;
+   
+}
+
+.words {
+  overflow: hidden;
+  position: relative;
+}
+
+.words::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+      var(--bg-color) 10%,
+      transparent 30%,
+      transparent 70%,
+      var(--bg-color) 90%
+  );
+  z-index: 20;
+}
+
+.word {
+  display: block;
+  height: 100%;
+ 
+  color: #956afa;
+  animation: spin_4991 4s infinite;
+}
+
+@keyframes spin_4991 {
+  10% {
+      transform: translateY(-102%);
+  }
+  25% {
+      transform: translateY(-100%);
+  }
+  35% {
+      transform: translateY(-202%);
+  }
+  50% {
+      transform: translateY(-200%);
+  }
+  60% {
+      transform: translateY(-302%);
+  }
+  75% {
+      transform: translateY(-300%);
+  }
+  85% {
+      transform: translateY(-402%);
+  }
+  100% {
+      transform: translateY(-400%);
+  }
+}
+
 .description {
   max-width: 32rem;
   color: var(--color-text-secondary);
+  font-size: 1rem;
 }
 
 .cta-buttons {
   display: flex;
   gap: 1rem;
+  flex-wrap: wrap;
 }
 
-/* === MODERN BUTTON STYLES === */
+/* Card Styling */
+.card {
+  --bg-color: #212121; /* Color for soft clipping */
+  background-color: var(--bg-color);
+  padding: 1rem 2rem;
+  border-radius: 1.25rem;
+}
+
+/* Button Styling */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -292,7 +372,7 @@ body {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Optional: Add a subtle ripple effect on click */
+/* Ripple Effect on Buttons */
 .btn::after {
   content: '';
   position: absolute;
@@ -313,18 +393,43 @@ body {
   transition: transform 0s, opacity 0s;
 }
 
-/* === FLOATING ANIMATION FOR HERO IMAGE === */
+/* Floating Animation for the Hero Image */
 @keyframes float {
   0% {
-    transform: translateY(0);
+      transform: translateY(0);
   }
-
   50% {
-    transform: translateY(-1rem);
+      transform: translateY(-1rem);
+  }
+  100% {
+      transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+      grid-template-columns: 1fr;
+      text-align: center;
   }
 
-  100% {
-    transform: translateY(0);
+  .hero-image {
+      text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+      font-size: 2rem;
+  }
+
+  .description {
+      font-size: 0.9rem;
+  }
+
+  .cta-buttons {
+      flex-direction: column;
+      gap: 0.75rem;
   }
 }
 

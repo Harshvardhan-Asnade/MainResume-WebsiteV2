@@ -43,32 +43,42 @@
         </nav>
     </header>
 
-    <!-- Hero Section -->
-    <section id="home">
-        <main class="hero container">
-            <div class="hero-content">
-                <h1 class="title">
-                    Hi There! <span>I'm Harshvardhan</span>
-                </h1>
-                <p class="description">
-                    I'm a developer skilled in C, C++, Python, Java, and web design, passionate about creating efficient
-                    programs and delivering exceptional user experiences.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#contact" class="btn btn-primary">Contact <span class="arrow">→</span></a>
-                    <a href="#projects" class="btn btn-secondary">Projects <span class="arrow">→</span></a>
+<!-- Hero Section -->
+<section id="home" aria-labelledby="hero-title">
+    <div class="hero container">
+        <div class="hero-content">
+            <h1 class="title" id="hero-title">
+                Hi There! <span>I'm Harshvardhan</span>
+            </h1>
+            <div class="loader"><div class="words">
+                    <span class="word">Software Development Expertise</span>
+                    <span class="word">Testing and Debugging</span>
+                    <span class="word">Innovative Problem Solving</span>
+                    <span class="word">Analytical Thinking</span>
+                    <span class="word">Logical Reasoning</span>
+                    <span class="word">Code Quality and Optimization</span>
                 </div>
             </div>
-            <div class="hero-image">
-                <img src="Programmer-Illustration_upscaled.png" alt="Frontend Developer Illustration">
+            <p class="description">
+                I'm a developer skilled in C, C++, Python, Java, and web design, passionate about creating efficient
+                programs and delivering exceptional user experiences.
+            </p>
+            <div class="cta-buttons">
+                <a href="#contact" class="btn btn-primary" aria-label="Contact me">Contact <span class="arrow">→</span></a>
+                <a href="#projects" class="btn btn-secondary" aria-label="View my projects">Projects <span class="arrow">→</span></a>
             </div>
-        </main>
-    </section>
+        </div>
+        <div class="hero-image">
+            <img src="Programmer-Illustration_upscaled.png" alt="Illustration of a frontend developer" loading="lazy">
+        </div>
+    </div>
+</section>
+
     <!-- Skills Section -->
     <section id="skills" class="skills-box">
         <div class="container">
             <h2 class="section-title">My Skills</h2>
-            <p class="subtitle">✨ Technologies I work with ✨</p>
+            <p class="subtitle">✨ Technologies I work with ✨</p><br>
             <div class="skills-container">
                 <div class="skill" aria-label="C Programming">
                     <div class="skill-icon">
