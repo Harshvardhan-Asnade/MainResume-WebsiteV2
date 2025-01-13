@@ -1174,3 +1174,20 @@ body {
     gap: 1rem;
   }
 }
+.button-link {
+  padding: 4px 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 30px;  /* Curved corners */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition: all 0.3s ease;  /* Smooth transition */
+}
+
+.button-link:hover {
+  background-color: #0056b3;
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);  /* Light effect (glow) */
+  transform: scale(1.05);  /* Slightly enlarge when hovered */
+}
