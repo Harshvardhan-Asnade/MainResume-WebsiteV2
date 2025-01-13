@@ -28,4 +28,25 @@ document.getElementById('contactForm').addEventListener('submit', function (even
       alert('Message sent successfully!');
     }
   });
-  
+  document.addEventListener('DOMContentLoaded', function () {
+    const navToggle = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const navItems = document.querySelectorAll('.nav-link');
+
+    // Toggle navigation menu
+    navToggle.addEventListener('click', function () {
+        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+        navToggle.setAttribute('aria-expanded', !isExpanded);
+        navLinks.classList.toggle('active');
+    });
+
+    // Close menu when a link is clicked
+    navItems.forEach(link => {
+        link.addEventListener('click', function () {
+            if (navLinks.classList.contains('active')) {
+                navLinks.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+            }
+        });
+    });
+});
