@@ -1102,6 +1102,34 @@ body {
   }
 }
 
+@media (max-width: 480px) {
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .section-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .social-icon {
+    padding: 0.8rem;
+  }
+
+  .social-icon span {
+    font-size: 1rem;
+  }
+
+  .social-form input,
+  .social-form textarea {
+    font-size: 0.85rem;
+  }
+
+  .contact-form button {
+    font-size: 0.95rem;
+  }
+}
+
+
 /* === FOOTER SECTION === */
 .footer {
   background: rgba(0, 0, 0, 0.8);
