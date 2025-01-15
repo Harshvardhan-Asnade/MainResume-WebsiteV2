@@ -1,27 +1,42 @@
 /* === ROOT VARIABLES === */
 :root {
   /* Colors */
-  --color-primary: #1e90ff; /* Modern blue */
-  --color-primary-dark: #0077b6; /* Darker blue */
-  --color-background-start: #000000; /* Black */
-  --color-background-end: #003366; /* Dark blue */
-  --color-surface: #1a1a1a; /* Dark surface */
-  --color-surface-dark: #0d0d0d; /* Darker surface */
-  --color-border: #333333; /* Border color */
-  --color-text: #ffffff; /* White text */
-  --color-text-secondary: #b3b3b3; /* Secondary text */
+  --color-primary: #1e90ff;
+  /* Modern blue */
+  --color-primary-dark: #0077b6;
+  /* Darker blue */
+  --color-background-start: #000000;
+  /* Black */
+  --color-background-end: #003366;
+  /* Dark blue */
+  --color-surface: #1a1a1a;
+  /* Dark surface */
+  --color-surface-dark: #0d0d0d;
+  /* Darker surface */
+  --color-border: #333333;
+  /* Border color */
+  --color-text: #ffffff;
+  /* White text */
+  --color-text-secondary: #b3b3b3;
+  /* Secondary text */
 
   /* Spacing */
-  --spacing-padding: 1.5rem; /* Default padding */
-  --spacing-gap: 1.5rem; /* Default gap */
-  --spacing-radius: 0.5rem; /* Border radius */
+  --spacing-padding: 1.5rem;
+  /* Default padding */
+  --spacing-gap: 1.5rem;
+  /* Default gap */
+  --spacing-radius: 0.5rem;
+  /* Border radius */
 
   /* Transitions */
-  --transition-duration: 0.3s; /* Transition duration */
-  --transition-timing: ease; /* Transition timing function */
+  --transition-duration: 0.3s;
+  /* Transition duration */
+  --transition-timing: ease;
+  /* Transition timing function */
 
   /* Shadows */
-  --shadow-default: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1); /* Default shadow */
+  --shadow-default: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  /* Default shadow */
 }
 
 /* === GLOBAL RESET === */
@@ -31,7 +46,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
@@ -208,7 +224,8 @@ body {
 .hero-content {
   display: flex;
   flex-direction: column;
-  gap: 1rem; /* Reduced gap between elements */
+  gap: 1rem;
+  /* Reduced gap between elements */
 }
 
 .hero-image {
@@ -223,9 +240,10 @@ body {
 
 .title {
   font-size: clamp(2.5rem, 6vw, 3rem);
-    font-weight: 700;
-    line-height: 1.2;
-    margin-bottom: 0; /* Ensure no bottom margin */
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 0;
+  /* Ensure no bottom margin */
 }
 
 
@@ -243,9 +261,9 @@ body {
   box-sizing: content-box;
   height: 40px;
   display: flex;
- 
+
   position: relative;
-   
+
 }
 
 .words {
@@ -257,47 +275,52 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-      var(--bg-color) 10%,
+  background: linear-gradient(var(--bg-color) 10%,
       transparent 30%,
       transparent 70%,
-      var(--bg-color) 90%
-  );
+      var(--bg-color) 90%);
   z-index: 20;
 }
 
 .word {
   display: block;
   height: 100%;
- 
+
   color: #956afa;
   animation: spin_4991 4s infinite;
 }
 
 @keyframes spin_4991 {
   10% {
-      transform: translateY(-102%);
+    transform: translateY(-102%);
   }
+
   25% {
-      transform: translateY(-100%);
+    transform: translateY(-100%);
   }
+
   35% {
-      transform: translateY(-202%);
+    transform: translateY(-202%);
   }
+
   50% {
-      transform: translateY(-200%);
+    transform: translateY(-200%);
   }
+
   60% {
-      transform: translateY(-302%);
+    transform: translateY(-302%);
   }
+
   75% {
-      transform: translateY(-300%);
+    transform: translateY(-300%);
   }
+
   85% {
-      transform: translateY(-402%);
+    transform: translateY(-402%);
   }
+
   100% {
-      transform: translateY(-400%);
+    transform: translateY(-400%);
   }
 }
 
@@ -315,7 +338,8 @@ body {
 
 /* Card Styling */
 .card {
-  --bg-color: #212121; /* Color for soft clipping */
+  --bg-color: #212121;
+  /* Color for soft clipping */
   background-color: var(--bg-color);
   padding: 1rem 2rem;
   border-radius: 1.25rem;
@@ -396,40 +420,42 @@ body {
 /* Floating Animation for the Hero Image */
 @keyframes float {
   0% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
+
   50% {
-      transform: translateY(-1rem);
+    transform: translateY(-1rem);
   }
+
   100% {
-      transform: translateY(0);
+    transform: translateY(0);
   }
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
   .hero {
-      grid-template-columns: 1fr;
-      text-align: center;
+    grid-template-columns: 1fr;
+    text-align: center;
   }
 
   .hero-image {
-      text-align: center;
+    text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .title {
-      font-size: 2rem;
+    font-size: 2rem;
   }
 
   .description {
-      font-size: 0.9rem;
+    font-size: 0.9rem;
   }
 
   .cta-buttons {
-      flex-direction: column;
-      gap: 0.75rem;
+    flex-direction: column;
+    gap: 0.75rem;
   }
 }
 
@@ -983,7 +1009,8 @@ body {
 
 .contact-form input,
 .contact-form textarea {
-  width: 100%;
+  min-width:40vh;
+  width: 80%;
   padding: 1rem;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -992,6 +1019,7 @@ body {
   color: white;
   background: rgba(255, 255, 255, 0.1);
   transition: all 0.3s ease;
+
 }
 
 .contact-form input::placeholder,
@@ -1174,20 +1202,26 @@ body {
     gap: 1rem;
   }
 }
+
 .button-link {
   padding: 4px 10px;
   background-color: #007bff;
   color: white;
   border: none;
-  border-radius: 30px;  /* Curved corners */
+  border-radius: 30px;
+  /* Curved corners */
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  transition: all 0.3s ease;  /* Smooth transition */
+  transition: all 0.3s ease;
+  /* Smooth transition */
 }
 
 .button-link:hover {
   background-color: #0056b3;
-  box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);  /* Light effect (glow) */
-  transform: scale(1.05);  /* Slightly enlarge when hovered */
+  box-shadow: 0 0 15px rgba(0, 123, 255, 0.8);
+  /* Light effect (glow) */
+  transform: scale(1.05);
+  /* Slightly enlarge when hovered */
 }
+ 
