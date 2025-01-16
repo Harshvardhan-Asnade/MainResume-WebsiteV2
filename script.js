@@ -50,3 +50,11 @@ document.getElementById('contactForm').addEventListener('submit', function (even
         });
     });
 });
+<script>
+  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+  const mobileMenu = document.querySelector('.mobile-menu');
+
+  mobileNavToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('active');
+  });
+</script>

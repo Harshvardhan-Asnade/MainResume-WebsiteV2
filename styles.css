@@ -91,6 +91,7 @@ body {
 }
 
 /* === HEADER === */
+
 .header {
   position: fixed;
   top: 0;
@@ -957,69 +958,67 @@ body {
 
 /* === CONTACT SECTION === */
 .contact {
-  padding: 6rem 1.5rem;
+  padding: 4rem 1.5rem;
   background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 10%, transparent 10.01%);
   color: white;
   display: flex;
   justify-content: center;
   align-items: center;
-  min-height: 100vh;
 }
 
 .contact .container {
-  max-width: 1200px;
+  max-width: 1100px;
   width: 100%;
-  padding: 3rem;
+  padding: 2rem;
   background: rgba(255, 255, 255, 0.1);
-  border-radius: 20px;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
 }
 
 .section-header {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .section-title {
-  font-size: 2.8rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
   color: white;
 }
 
 .section-subtitle {
-  font-size: 1.1rem;
+  font-size: 1rem;
   color: rgba(255, 255, 255, 0.8);
 }
 
 .contact-wrapper {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
+  gap: 2rem;
   justify-content: center;
   align-items: flex-start;
 }
 
-.contact-form {
+.contact-form,
+.social-section {
   flex: 1;
-  min-width: 300px;
-  max-width: 600px;
+  min-width: 280px;
+  max-width: 550px;
 }
 
 .contact-form input,
 .contact-form textarea {
-  min-width:40vh;
-  width: 80%;
+  width: 100%;
   padding: 1rem;
   margin-bottom: 1.5rem;
   border: 1px solid rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+  border-radius: 8px;
   font-size: 1rem;
   color: white;
   background: rgba(255, 255, 255, 0.1);
-  transition: all 0.3s ease;
-
+  transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .contact-form input::placeholder,
@@ -1041,52 +1040,42 @@ body {
   background: #2094fc;
   color: white;
   border: none;
-  border-radius: 10px;
-  font-size: 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .contact-form button:hover {
-  background: #574bcc;
-  transform: translateY(-3px);
-}
-
-.social-section {
-  flex: 1;
-  min-width: 250px;
-  max-width: 400px;
-}
-
-.social-section h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  text-align: center;
-  color: white;
+  background: #0056b3;
+  transform: translateY(-2px);
 }
 
 .social-links {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .social-icon {
   display: flex;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  border-radius: 10px;
+  padding: 0.8rem;
+  border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
   text-decoration: none;
-  transition: all 0.3s ease;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
 .social-icon:hover {
-  background: #574bcc;
-  transform: translateY(-5px);
+  background: #2094fc;
+  transform: translateY(-3px);
 }
 
 .social-icon img {
@@ -1095,7 +1084,7 @@ body {
 }
 
 .social-icon span {
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
 }
 
@@ -1106,27 +1095,16 @@ body {
     gap: 2rem;
   }
 
-  .contact-form,
-  .social-section {
-    width: 100%;
-    max-width: 100%;
-  }
-
   .section-title {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 
   .section-subtitle {
-    font-size: 1rem;
-  }
-
-  .contact-form input,
-  .contact-form textarea {
     font-size: 0.9rem;
   }
 
   .contact-form button {
-    font-size: 1rem;
+    font-size: 0.9rem;
   }
 }
 

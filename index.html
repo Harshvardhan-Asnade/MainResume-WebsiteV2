@@ -17,14 +17,13 @@
 </head>
 
 <body>
-    <!-- Header -->
     <header class="header">
         <nav class="nav container" role="navigation">
-            <!-- Logo with a link to the main page -->
+            <!-- Logo -->
             <a href="#home" class="logo" aria-label="Go to Home" title="Go to Home">
                 <img src="android-chrome-192x192.png" alt="Harshvardhan's Logo" width="35" height="35" loading="lazy">
             </a>
-
+    
             <!-- Navigation Links -->
             <ul class="nav-links" id="nav-links">
                 <li><a href="#home" class="nav-link">Home</a></li>
@@ -33,15 +32,14 @@
                 <li><a href="#about" class="nav-link">About</a></li>
                 <li><a href="#contact" class="nav-link button-link">Contact</a></li>
             </ul>
-
-
-            <!-- Mobile Navigation Toggle Button -->
-            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false"
-                aria-controls="nav-links">
+    
+            <!-- Mobile Navigation Toggle -->
+            <button class="mobile-nav-toggle" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">
                 <span class="hamburger"></span>
             </button>
         </nav>
     </header>
+    
 
 <!-- Hero Section -->
 <section id="home" aria-labelledby="hero-title">
@@ -330,7 +328,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="contact">
         <div class="container">
             <div class="section-header">
@@ -340,18 +337,18 @@
             <div class="contact-wrapper">
                 <!-- Contact Form -->
                 <div class="contact-form">
-                    <form id="contactForm">
+                    <form id="contactForm" aria-label="Contact Form">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input type="text" id="name" placeholder="Your Name" required />
+                            <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true" />
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input type="email" id="email" placeholder="Your Email" required />
+                            <input type="email" id="email" name="email" placeholder="Your Email" required aria-required="true" />
                         </div>
                         <div class="form-group">
-                            <label for="message"></label>
-                            <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Your Message" rows="5" required aria-required="true"></textarea>
                         </div>
                         <button type="submit" class="btn">Send Message</button>
                     </form>
@@ -359,40 +356,43 @@
                 <!-- Social Links -->
                 <div class="social-section">
                     <ul class="social-links">
-
-                        <a href="https://github.com/Harshvardhan-Asnade" target="_blank" rel="noopener noreferrer"
-                            class="social-icon" aria-label="GitHub">
-                            <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
-                                alt="GitHub Icon" width="40">
-                            <span>GitHub</span>
-                        </a>
-
-                        <a href="https://www.linkedin.com/in/harshvardhan-asnade-225000344/" target="_blank"
-                            rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
-                            <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
-                                alt="LinkedIn Icon" width="40">
-                            <span>LinkedIn</span>
-                        </a>
-
-                        <a href="https://leetcode.com/u/HarshAsnade/" target="_blank" rel="noopener noreferrer"
-                            class="social-icon" aria-label="LeetCode">
-                            <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
-                                alt="LeetCode Icon" width="40">
-                            <span>LeetCode</span>
-                        </a>
-
-                        <a href="mailto:harshasnade1@gmail.com" class="social-icon" aria-label="Email">
-                            <img src="https://img.icons8.com/?size=100&id=13826&format=png&color=000000"
-                                alt="Email Icon" width="40">
-                            <span>Email</span>
-                        </a>
-
+                        <li>
+                            <a href="https://github.com/Harshvardhan-Asnade" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="GitHub">
+                                <img src="https://img.icons8.com/?size=100&id=62856&format=png&color=000000"
+                                    alt="GitHub Icon" width="40">
+                                <span>GitHub</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.linkedin.com/in/harshvardhan-asnade-225000344/" target="_blank"
+                                rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn">
+                                <img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000"
+                                    alt="LinkedIn Icon" width="40">
+                                <span>LinkedIn</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://leetcode.com/u/HarshAsnade/" target="_blank" rel="noopener noreferrer"
+                                class="social-icon" aria-label="LeetCode">
+                                <img src="https://img.icons8.com/?size=100&id=wDGo581Ea5Nf&format=png&color=000000"
+                                    alt="LeetCode Icon" width="40">
+                                <span>LeetCode</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="mailto:harshasnade1@gmail.com" class="social-icon" aria-label="Email">
+                                <img src="https://img.icons8.com/?size=100&id=13826&format=png&color=000000"
+                                    alt="Email Icon" width="40">
+                                <span>Email</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
