@@ -191,23 +191,71 @@ body {
   display: none;
 }
 
-/* Responsive Design */
+/* Adjusting the mobile navigation styles for better responsiveness */
 @media (max-width: 768px) {
-  .header {
-    top: 0.5rem;
-    width: 92%;
-  }
-
-  .nav {
-    padding: 0 1rem;
-  }
-
   .nav-links {
-    display: none;
+      display: none;
+      flex-direction: column;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background-color: rgba(15, 16, 25, 0.95);
+      padding: 1rem;
+      border-radius: 0 0 1rem 1rem;
+      z-index: 10;
+  }
+
+  .nav-links.active {
+      display: flex;
   }
 
   .mobile-nav-toggle {
-    display: block;
+      display: block;
+      background: none;
+      border: none;
+      cursor: pointer;
+  }
+
+  .mobile-nav-toggle .hamburger {
+      display: block;
+      width: 24px;
+      height: 3px;
+      background-color: white;
+      position: relative;
+      transition: all 0.3s ease;
+  }
+
+  .mobile-nav-toggle .hamburger::before,
+  .mobile-nav-toggle .hamburger::after {
+      content: '';
+      position: absolute;
+      width: 24px;
+      height: 3px;
+      background-color: white;
+      transition: all 0.3s ease;
+  }
+
+  .mobile-nav-toggle .hamburger::before {
+      top: -8px;
+  }
+
+  .mobile-nav-toggle .hamburger::after {
+      top: 8px;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] .hamburger {
+      background: transparent;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] .hamburger::before {
+      transform: rotate(45deg);
+      top: 0;
+  }
+
+  .mobile-nav-toggle[aria-expanded="true"] .hamburger::after {
+      transform: rotate(-45deg);
+      top: 0;
   }
 }
 

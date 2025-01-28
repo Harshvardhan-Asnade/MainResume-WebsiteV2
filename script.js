@@ -27,34 +27,22 @@ document.getElementById('contactForm').addEventListener('submit', function (even
     } else {
       alert('Message sent successfully!');
     }
-  });
-  document.addEventListener('DOMContentLoaded', function () {
-    const navToggle = document.querySelector('.mobile-nav-toggle');
-    const navLinks = document.getElementById('nav-links');
-    const navItems = document.querySelectorAll('.nav-link');
+  });document.addEventListener('DOMContentLoaded', () => {
+    const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
 
-    // Toggle navigation menu
-    navToggle.addEventListener('click', function () {
-        const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-        navToggle.setAttribute('aria-expanded', !isExpanded);
+    // Toggle mobile menu visibility
+    mobileNavToggle.addEventListener('click', () => {
+        const isExpanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
+        mobileNavToggle.setAttribute('aria-expanded', !isExpanded);
         navLinks.classList.toggle('active');
     });
 
-    // Close menu when a link is clicked
-    navItems.forEach(link => {
-        link.addEventListener('click', function () {
-            if (navLinks.classList.contains('active')) {
-                navLinks.classList.remove('active');
-                navToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
+    // Close menu when a navigation link is clicked
+    navLinks.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A' && navLinks.classList.contains('active')) {
+            navLinks.classList.remove('active');
+            mobileNavToggle.setAttribute('aria-expanded', 'false');
+        }
     });
 });
-<script>
-  const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
-  const mobileMenu = document.querySelector('.mobile-menu');
-
-  mobileNavToggle.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-  });
-</script>
