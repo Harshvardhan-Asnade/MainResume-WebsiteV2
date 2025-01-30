@@ -1,42 +1,27 @@
-Here's a modern, sleek GitHub README design with badges, emojis, and modern markdown styling:
-
-```markdown
-<div align="center">
-
 # 💻 Harshvardhan Asnade's Digital Resume
 
-![Website Preview](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/assets/images/website-screenshot.png)
+[![GitHub License](https://img.shields.io/github/license/harshvardhan-asnade/MainResume-WebsiteV2?style=flat&color=blue)](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/blob/main/LICENSE)  
+[![Website Status](https://img.shields.io/website?style=flat&url=https%3A%2F%2Fharshvardhan-asnade.github.io%2FMainResume-WebsiteV2%2F)](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/)  
+[![GitHub Stars](https://img.shields.io/github/stars/harshvardhan-asnade/MainResume-WebsiteV2?style=flat&color=yellow)](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/stargazers)  
+[![GitHub Issues](https://img.shields.io/github/issues/harshvardhan-asnade/MainResume-WebsiteV2?style=flat&color=red)](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/issues)  
 
-[![GitHub License](https://img.shields.io/github/license/harshvardhan-asnade/MainResume-WebsiteV2?style=flat-square)](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/blob/main/LICENSE)
-[![Website Status](https://img.shields.io/website?style=flat-square&url=https%3A%2F%2Fharshvardhan-asnade.github.io%2FMainResume-WebsiteV2%2F)](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/)
-[![GitHub Stars](https://img.shields.io/github/stars/harshvardhan-asnade/MainResume-WebsiteV2?style=flat-square)](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/stargazers)
-[![GitHub Issues](https://img.shields.io/github/issues/harshvardhan-asnade/MainResume-WebsiteV2?style=flat-square)](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/issues)
+> A sleek, modern web resume with interactive features, dark mode, and responsive design
 
-**A modern web resume with dark mode, interactive elements, and responsive design**
+![Website Preview](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/assets/images/website-screenshot.png)  
+[Live Demo](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/) | [Download PDF](https://example.com/resume.pdf) | [Report an Issue](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/issues)
 
-[Live Demo](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/) • [Download PDF](https://example.com/resume.pdf) • [Report Bug](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/issues)
+---
 
-</div>
-
-## 🚀 Features
-
-<div align="center">
-
-| Modern Design          | Interactive Elements     | Responsive Layout      |
-|------------------------|--------------------------|------------------------|
-| 🎨 Clean UI/UX         | 📊 Animated Skill Charts | 📱 Mobile-First Approach |
-| 🌓 Dark/Light Mode     | 🕹️ Clickable Timeline    | 🖥️ Desktop Optimized   |
-| 🖼️ Project Gallery     | 📩 Functional Contact Form | 🧩 Flexible Components |
-
-</div>
+ 
 
 ## 🛠️ Tech Stack
 
-![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat-square&logo=html5&logoColor=white)
-![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat-square&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat-square&logo=javascript&logoColor=black)
-![GitHub Pages](https://img.shields.io/badge/-GitHub%20Pages-222222?style=flat-square&logo=githubpages&logoColor=white)
-![Font Awesome](https://img.shields.io/badge/-Font%20Awesome-528DD7?style=flat-square&logo=fontawesome&logoColor=white)
+![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)  
+![CSS3](https://img.shields.io/badge/-CSS3-1572B6?style=flat&logo=css3&logoColor=white)  
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)  
+![GitHub Pages](https://img.shields.io/badge/-GitHub%20Pages-222222?style=flat&logo=githubpages&logoColor=white)  
+
+---
 
 ## ⚡ Quick Start
 
@@ -46,78 +31,3 @@ git clone https://github.com/harshvardhan-asnade/MainResume-WebsiteV2.git
 
 # Open in browser
 cd MainResume-WebsiteV2 && open index.html
-```
-
-## 🌈 Customization Guide
-
-1. **Content Update**  
-   Edit `index.html` for personal information and content
-
-2. **Styling**  
-   Modify CSS variables in `assets/css/style.css`:
-   ```css
-   :root {
-     --primary-color: #2ecc71;  /* Change theme color */
-     --dark-mode-bg: #1a1a1a;   /* Adjust dark mode */
-   }
-   ```
-
-3. **Add Projects**  
-   Insert new project cards in the projects section:
-   ```html
-   <div class="project-card">
-     <img src="new-project.jpg" alt="Project">
-     <h3>New Project</h3>
-     <p>Project description</p>
-   </div>
-   ```
-
-## 📂 Project Structure
-
-```
-MainResume-WebsiteV2/
-├── assets/
-│   ├── css/          # Style sheets
-│   ├── js/           # JavaScript files
-│   └── images/       # All visual assets
-├── index.html        # Main website file
-└── LICENSE           # MIT License
-```
-
-## 🤝 Contribution
-
-Contributions are welcome! Please follow these steps:
-
-1. Fork the project
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## 📄 License
-
-Distributed under the MIT License. See `LICENSE` for more information.
-
----
-
-<div align="center">
-  
-[![GitHub Contributors](https://img.shields.io/github/contributors/harshvardhan-asnade/MainResume-WebsiteV2?style=for-the-badge)](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/graphs/contributors)
-[![GitHub Last Commit](https://img.shields.io/github/last-commit/harshvardhan-asnade/MainResume-WebsiteV2?style=for-the-badge)](https://github.com/harshvardhan-asnade/MainResume-WebsiteV2/commits/main)
-
-</div>
-```
-
-Key modern elements added:
-1. Centered header with badges shield
-2. Feature comparison table
-3. Tech stack badges with icons
-4. Color-coded code blocks
-5. Structured project tree visualization
-6. Contribution guidelines with emoji
-7. Dynamic GitHub statistics at bottom
-8. Responsive markdown formatting
-9. Interactive elements preview
-10. Modern emoji usage throughout
-
-This version includes more visual elements while maintaining readability and professional presentation. The badges and shields add dynamic status indicators while keeping the layout clean and organized.
