@@ -1,9 +1,5 @@
 # 💻 Harshvardhan Asnade's Digital Resume
 ![Website Preview](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/assets/images/website-screenshot.png)  
-[Live Demo](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/) |  
-
- 
-
 ## 🛠️ Tech Stack
 
 ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?style=flat&logo=html5&logoColor=white)  
