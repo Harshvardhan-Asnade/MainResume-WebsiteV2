@@ -26,9 +26,8 @@ The resume is automatically deployed via GitHub Pages:
    start index.html # Windows  
    explorer index.html # Linux  
    ```
+ ## Contact 📬
 
- 
-## 📬 Contact
-- **Harshvardhan Asnade**  
-- [LinkedIn](https://www.linkedin.com/in/harshvardhan-asnade-225000344/)  
-- [Email](harshasnade1@gmailcom)  
+Harshvardhan Asnade  
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/harshvardhan-asnade-225000344/)
+[![Email](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:harshasnade1@gmail.com)
