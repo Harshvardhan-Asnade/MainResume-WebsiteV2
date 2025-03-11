@@ -90,3 +90,33 @@ document.addEventListener("DOMContentLoaded", function() {
          
     }
 });
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const certificateCards = document.querySelectorAll('.certificate-card');
+    const searchInput = document.getElementById('certificate-search');
+  
+    // Filter Functionality
+    filterButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+  
+        const filterValue = button.getAttribute('data-filter');
+  
+        certificateCards.forEach(card => {
+          const cardCategory = card.getAttribute('data-category');
+          card.style.display = (filterValue === 'all' || cardCategory === filterValue) ? 'block' : 'none';
+        });
+      });
+    });
+  
+    // Search Functionality
+    searchInput.addEventListener('keyup', () => {
+      const searchValue = searchInput.value.toLowerCase();
+      certificateCards.forEach(card => {
+        const title = card.querySelector('h3').textContent.toLowerCase();
+        card.style.display = title.includes(searchValue) ? 'block' : 'none';
+      });
+    });
+  });
+  
