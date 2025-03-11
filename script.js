@@ -56,7 +56,29 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 });
-
+// Add to script.js
+function optimizeMobileInteractions() {
+    if (window.innerWidth < 768) {
+      document.querySelectorAll('.certificate-card').forEach(card => {
+        card.style.touchAction = 'manipulation';
+        card.querySelectorAll('a').forEach(link => {
+          link.style.touchAction = 'manipulation';
+        });
+      });
+  
+      // Add slight delay for hover effects removal
+      setTimeout(() => {
+        document.querySelectorAll('.certificate-card').forEach(card => {
+          card.style.transform = 'none';
+          card.style.boxShadow = 'none';
+        });
+      }, 100);
+    }
+  }
+  
+  // Initialize on load and resize
+  window.addEventListener('load', optimizeMobileInteractions);
+  window.addEventListener('resize', optimizeMobileInteractions);
 // Form Validation
 document.getElementById('contactForm')?.addEventListener('submit', function(e) {
     const name = document.getElementById('name').value.trim();
