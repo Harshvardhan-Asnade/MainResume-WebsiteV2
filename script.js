@@ -141,4 +141,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
     });
   });
-  
+   
+
+    container.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    });

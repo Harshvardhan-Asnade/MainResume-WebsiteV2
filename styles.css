@@ -666,175 +666,7 @@ body {
   }
 }
 
-/* === SKILLS SECTION === */
-/* General Styles */
-.skills-box {
-  padding: 5rem 1.5rem;
-  text-align: center;
-  position: relative;
-  overflow: hidden;
-}
-
-.skills-box::before {
-  content: '';
-  position: absolute;
-  top: -50%;
-  left: -50%;
-  width: 200%;
-  height: 200%;
-  background: radial-gradient(circle, rgba(255, 255, 255, 0.05) 10%, transparent 10.01%);
-  background-size: 25px 25px;
-  animation: moveBackground 8s linear infinite;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.skills-box .title {
-  font-size: 2.75rem;
-  font-weight: 700;
-  margin-bottom: 2.5rem;
-  position: relative;
-  display: inline-block;
-  color: var(--color-text);
-  width: 100%;
-  transition: color 0.3s ease-in-out;
-}
-
-.skills-box .title::after {
-  content: '';
-  display: block;
-  width: 70px;
-  height: 5px;
-  background: linear-gradient(90deg, var(--color-primary), transparent);
-  margin: 1.25rem auto 0;
-  border-radius: 3px;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.5s ease-in-out;
-}
-
-.skills-box .title:hover::after {
-  transform: scaleX(1);
-}
-
-/* Skills Container */
-.skills-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.75rem;
-  max-width: 1300px;
-  margin: 0 auto;
-  position: relative;
-  z-index: 1;
-}
-
-.skill {
-  text-align: center;
-  width: 130px;
-  padding: 1.75rem;
-  background: rgba(255, 255, 255, 0.1);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  border-radius: var(--spacing-radius);
-  backdrop-filter: blur(12px);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.skill:hover {
-  border-color: var(--color-primary);
-  transform: translateY(-10px);
-  box-shadow: 0 9px 14px rgba(0, 0, 0, 0.2), 0 0 22px rgba(255, 255, 255, 0.1);
-}
-
-.skill img {
-  width: 75px;
-  height: 75px;
-  margin-bottom: 1.25rem;
-  transition: transform 0.3s ease-in-out, filter 0.3s ease-in-out;
-}
-
-.skill:hover img {
-  transform: scale(1.25) rotate(9deg);
-  filter: drop-shadow(0 0 12px var(--color-primary));
-}
-
-.skill p {
-  font-size: 1.1rem;
-  font-weight: 600;
-  color: var(--color-text);
-  margin: 0;
-  transition: color 0.3s ease-in-out;
-}
-
-.skill:hover p {
-  color: var(--color-primary);
-  text-shadow: 0 0 6px rgba(255, 255, 255, 0.2);
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .skills-box {
-    padding: 4.5rem 1.5rem;
-  }
-  
-  .skills-box .title {
-    font-size: 2.4rem;
-  }
-
-  .skills-container {
-    gap: 1.25rem;
-  }
-
-  .skill {
-    width: 115px;
-    padding: 1.4rem;
-  }
-
-  .skill img {
-    width: 65px;
-    height: 65px;
-  }
-}
-
-@media (max-width: 480px) {
-  .skills-box {
-    padding: 4rem 1rem;
-  }
-  
-  .skills-box .title {
-    font-size: 2rem;
-  }
-
-  .skills-container {
-    gap: 1rem;
-  }
-
-  .skill {
-    width: 105px;
-    padding: 1rem;
-  }
-
-  .skill img {
-    width: 55px;
-    height: 55px;
-  }
-
-  .skill p {
-    font-size: 0.95rem;
-  }
-}
-
-/* Keyframes Animation */
-@keyframes moveBackground {
-  from {
-    transform: translateX(0) translateY(0);
-  }
-  to {
-    transform: translateX(25px) translateY(25px);
-  }
-}
-
-
+ 
 /* === PROJECTS SECTION === */
 .projects-box {
   padding: 6rem 1rem;
@@ -1560,5 +1392,177 @@ body {
 
   .search-bar {
     font-size: 0.85rem;
+  }
+}
+ /* === SKILLS SECTION === */
+.skills-section {
+  display: flex;
+  flex-direction: column; /* Stack heading and cards vertically */
+  align-items: center; /* Center everything horizontally */
+  justify-content: center; /* Center everything vertically */
+  gap: 2rem; /* Space between heading and cards */
+  max-width: 1200px;
+  width: 100%;
+  padding: 4rem 1rem; /* Padding for the section */
+  margin: 0 auto; /* Center the section on the page */
+  text-align: center; /* Center text */
+}
+
+/* Skills Heading */
+.skills-heading-container {
+  text-align: center; /* Center the heading text */
+}
+
+.skills-heading {
+  font-size: 3rem; /* Adjust heading size */
+  font-weight: bold;
+  color: var(--color-text); /* Use your theme's text color */
+  position: relative;
+  display: inline-block;
+  text-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff, 
+    0 0 20px var(--color-primary), /* Use your theme's primary color */
+    0 0 40px var(--color-primary), 
+    0 0 80px var(--color-primary);
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Custom underline for the heading */
+.skills-heading::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -10px;
+  width: 100%;
+  height: 4px;
+  background-color: var(--color-primary); /* Use your theme's primary color */
+  box-shadow: 
+    0 0 5px #fff,
+    0 0 10px #fff, 
+    0 0 2px var(--color-primary),
+    0 0 4px var(--color-primary), 
+    0 0 8px var(--color-primary);
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+/* Skills Cards Container */
+.skills-cards-container {
+  display: flex;
+  justify-content: center; /* Center the cards horizontally */
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1.5rem; /* Space between cards */
+  padding: 1.5rem;
+  perspective: 1000px;
+  width: 100%; /* Full width */
+}
+
+/* Skill Card */
+.skill-card {
+  width: 100%; /* Full width for responsiveness */
+  max-width: 850px; /* Limit card width */
+  background: rgba(2, 0, 32, 0.95); /* Dark background with transparency */
+  backdrop-filter: blur(12px); /* Blur effect */
+  border-radius: 15px; /* Rounded corners */
+  padding: 1.5rem; /* Padding inside the card */
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
+             box-shadow 0.4s ease;
+  animation: glow 3s infinite;
+  border: 1px solid rgba(159, 207, 28, 0.2); /* Border with transparency */
+}
+
+/* Hover effect for skill card */
+.skill-card:hover {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.08);
+  box-shadow: 0 20px 50px rgba(177, 207, 6, 0.4),
+              inset 0 0 15px rgba(180, 170, 20, 0.3);
+  z-index: 2;
+}
+
+/* Decorative circles at the top of the card */
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* Align circles to the left */
+  gap: 8px; /* Space between circles */
+  margin-bottom: 1rem; /* Space below circles */
+}
+
+.decorative-circle {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%; /* Make it circular */
+  transition: transform 0.3s ease;
+}
+
+.decorative-circle:hover {
+  transform: scale(1.2); /* Enlarge on hover */
+}
+
+/* Colors for decorative circles */
+.circle-red { background-color: #ff605c; }
+.circle-yellow { background-color: #ddcdaf; }
+.circle-green { background-color: #00ca4e; }
+
+/* Skills Grid */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Responsive grid */
+  gap: 1rem; /* Space between items */
+  padding: 1rem; /* Padding inside the grid */
+}
+
+/* Individual Skill Item */
+.skill-item {
+  text-align: center;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+
+.skill-item:hover {
+  transform: translateY(-5px) scale(1.1); /* Lift and scale on hover */
+}
+
+.skill-item img {
+  width: 65px; /* Icon size */
+  height: 65px;
+  transition: all 0.3s ease;
+  filter: grayscale(0.2); /* Slightly desaturated */
+}
+
+.skill-item:hover img {
+  filter: grayscale(0) drop-shadow(0 0 12px rgba(0, 80, 255, 0.7)); /* Add glow on hover */
+}
+
+.skill-item p {
+  color: #a0c8ff; /* Light blue text */
+  font-size: 14px;
+  margin-top: 8px; /* Space between icon and text */
+  font-weight: bold;
+  text-shadow: 0 0 8px rgba(0, 80, 255, 0.3); /* Subtle glow */
+}
+
+/* Glow Animation */
+@keyframes glow {
+  from {
+    text-shadow: 
+      0 0 1px #fff, 
+      0 0 1px #fff, 
+      0 0 2px var(--color-primary), 
+      0 0 4px var(--color-primary), 
+      0 0 8px var(--color-primary);
+  }
+  to {
+    text-shadow: 
+      0 0 1px #fff, 
+      0 0 2px #fff, 
+      0 0 3px var(--color-primary), 
+      0 0 6px var(--color-primary), 
+      0 0 12px var(--color-primary);
   }
 }
