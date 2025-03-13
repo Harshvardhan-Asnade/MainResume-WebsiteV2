@@ -1398,8 +1398,7 @@ body {
 /* === SKILLS SECTION === */
 #skills {
   padding: 4rem 1rem;
-  
-  color: var(--color-text);
+   color: var(--color-text);
   text-align: center;
 }
 
