@@ -291,7 +291,11 @@ body {
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 0;
-  /* Ensure no bottom margin */
+  background: linear-gradient(to right, #ececec, #0011ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 48px; /* Adjust as needed */
+  font-weight: bold;
 }
 
 
@@ -309,9 +313,7 @@ body {
   box-sizing: content-box;
   height: 40px;
   display: flex;
-
   position: relative;
-
 }
 
 .words {
@@ -1507,8 +1509,8 @@ body {
 }
 
 /* Colors for decorative circles */
-.circle-red { background-color: #ff0400; }
-.circle-yellow { background-color: #ddcdaf; }
+.circle-red { background-color:  #e33; }
+.circle-yellow { background-color: #ee0;; }
 .circle-green { background-color: #00ca4e; }
 
 /* Skills Grid */
