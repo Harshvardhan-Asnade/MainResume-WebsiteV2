@@ -1222,7 +1222,7 @@ body {
   font-size: 14px;
   margin-top: 8px;
   font-weight: bold;
-  text-shadow: 0 0 8px rgba(0, 80, 255, 0.3));
+  text-shadow: 0 0 8px rgba(0, 80, 255, 0.3);
 }
 
 /* === SKILLS SECTION - 2+ LOGOS GUARANTEE === */
@@ -1266,7 +1266,7 @@ body {
 /* Fluid layout control */
 @container skills-container (width < 500px) {
   .skills-grid {
-    grid-template-columns: repeat(2, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
   
   .skill-item {
@@ -1518,14 +1518,14 @@ body {
 /* Title */
 .project-card-title {
   font-size: 1.3rem; /* Slightly larger title from 1.5rem */
-  margin-bottom: 2rem; /* Increased spacing below title from 1rem */
+  margin-bottom: 3rem; /* Increased spacing below title from 1rem */
 }
 
 /* Image */
 .project-card-image {
   width: 400%;
-  max-width: 300px; /* Increased from 250px for larger images */
-  height: 180px; /* Increased from 150px for larger images */
+  max-width: 340px; /* Increased from 250px for larger images */
+  height: 220px; /* Increased from 150px for larger images */
   object-fit: cover; /* Ensures images scale properly */
   border-radius: 10px;
   margin-bottom: 2rem; /* Increased spacing below image from 1rem */
@@ -1540,7 +1540,7 @@ body {
 /* GitHub Button */
 .project-card-link {
   margin-top: auto; /* Pushes the button to the bottom */
-  padding: 0.75rem 2rem; /* Slightly larger button padding from 0.5rem 1.5rem */
+  padding: 0.55rem 2rem; /* Slightly larger button padding from 0.5rem 1.5rem */
   border: 1px solid var(--color-border);
   background: #000000;
   color: var(--color-text);
