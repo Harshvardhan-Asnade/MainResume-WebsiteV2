@@ -146,3 +146,32 @@ document.addEventListener('DOMContentLoaded', function () {
     container.addEventListener('mouseleave', () => {
       card.style.transform = 'rotateX(0deg) rotateY(0deg)';
     });
+    document.addEventListener('DOMContentLoaded', function () {
+      // Project Filter Functionality
+      const projectFilterButtons = document.querySelectorAll('#projects .certificate-filters .filter-btn');
+      const projectCards = document.querySelectorAll('#projects .certificate-card');
+      const projectSearchInput = document.getElementById('project-search');
+  
+      projectFilterButtons.forEach(button => {
+          button.addEventListener('click', () => {
+              projectFilterButtons.forEach(btn => btn.classList.remove('active'));
+              button.classList.add('active');
+  
+              const filterValue = button.getAttribute('data-filter');
+  
+              projectCards.forEach(card => {
+                  const cardCategory = card.getAttribute('data-category');
+                  card.style.display = (filterValue === 'all' || cardCategory === filterValue) ? 'block' : 'none';
+              });
+          });
+      });
+  
+      // Project Search Functionality
+      projectSearchInput.addEventListener('keyup', () => {
+          const searchValue = projectSearchInput.value.toLowerCase();
+          projectCards.forEach(card => {
+              const title = card.querySelector('h3').textContent.toLowerCase();
+              card.style.display = title.includes(searchValue) ? 'block' : 'none';
+          });
+      });
+  });
