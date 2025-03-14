@@ -1,34 +1,28 @@
-// Header Scroll Effect
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', function () {
+    // **Header Scroll Effect**
     const header = document.querySelector('.header');
     let lastScrollY = window.scrollY;
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
-        
         if (currentScrollY > 50 && currentScrollY > lastScrollY) {
             header.classList.add('header--small');
         } else if (currentScrollY <= 50 || currentScrollY < lastScrollY) {
             header.classList.remove('header--small');
         }
-        
         lastScrollY = currentScrollY;
     });
-});
 
-// Mobile Navigation
-document.addEventListener('DOMContentLoaded', () => {
+    // **Mobile Navigation**
     const mobileNavToggle = document.querySelector('.mobile-nav-toggle');
     const navLinks = document.querySelector('.nav-links');
 
-    // Toggle menu
     mobileNavToggle.addEventListener('click', () => {
         const isExpanded = mobileNavToggle.getAttribute('aria-expanded') === 'true';
         mobileNavToggle.setAttribute('aria-expanded', !isExpanded);
         navLinks.classList.toggle('active');
     });
 
-    // Close menu on click outside
     document.addEventListener('click', (e) => {
         if (!navLinks.contains(e.target) && !mobileNavToggle.contains(e.target)) {
             navLinks.classList.remove('active');
@@ -36,15 +30,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Smooth scroll and close menu
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.addEventListener('click', (e) => {
             if (window.innerWidth < 769) {
                 navLinks.classList.remove('active');
                 mobileNavToggle.setAttribute('aria-expanded', 'false');
             }
-            
-            // Smooth scroll behavior
             const targetId = link.getAttribute('href');
             if (targetId.startsWith('#')) {
                 e.preventDefault();
@@ -55,123 +46,91 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
-});
-// Add to script.js
-function optimizeMobileInteractions() {
-    if (window.innerWidth < 768) {
-      document.querySelectorAll('.certificate-card').forEach(card => {
-        card.style.touchAction = 'manipulation';
-        card.querySelectorAll('a').forEach(link => {
-          link.style.touchAction = 'manipulation';
-        });
-      });
-  
-      // Add slight delay for hover effects removal
-      setTimeout(() => {
-        document.querySelectorAll('.certificate-card').forEach(card => {
-          card.style.transform = 'none';
-          card.style.boxShadow = 'none';
-        });
-      }, 100);
-    }
-  }
-  
-  // Initialize on load and resize
-  window.addEventListener('load', optimizeMobileInteractions);
-  window.addEventListener('resize', optimizeMobileInteractions);
-// Form Validation
-document.getElementById('contactForm')?.addEventListener('submit', function(e) {
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
 
-    if (!name || !email || !message) {
-        e.preventDefault();
-        alert('Please fill out all fields.');
-    } else {
-        alert('Message sent successfully!');
-    }
-});
+    // **Form Validation**
+    document.getElementById('contactForm')?.addEventListener('submit', function(e) {
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
 
-// Image Lazy Loading
-document.addEventListener("DOMContentLoaded", function() {
-    const lazyImages = [].slice.call(document.querySelectorAll("img[loading='lazy']"));
-    
+        if (!name || !email || !message) {
+            e.preventDefault();
+            alert('Please fill out all fields.');
+        } else {
+            alert('Message sent successfully!');
+        }
+    });
+
+    // **Image Lazy Loading**
+    const lazyImages = document.querySelectorAll("img[loading='lazy']");
     if ("IntersectionObserver" in window) {
         let lazyImageObserver = new IntersectionObserver(function(entries) {
             entries.forEach(function(entry) {
                 if (entry.isIntersecting) {
                     let lazyImage = entry.target;
-                    lazyImage.src = lazyImage.dataset.src;
+                    if (lazyImage.dataset.src) {
+                        lazyImage.src = lazyImage.dataset.src;
+                    }
                     lazyImage.classList.remove("lazy");
                     lazyImageObserver.unobserve(lazyImage);
                 }
             });
         });
 
-         
-    }
-});
-document.addEventListener('DOMContentLoaded', function () {
-    const filterButtons = document.querySelectorAll('.filter-btn');
-    const certificateCards = document.querySelectorAll('.certificate-card');
-    const searchInput = document.getElementById('certificate-search');
-  
-    // Filter Functionality
-    filterButtons.forEach(button => {
-      button.addEventListener('click', () => {
-        filterButtons.forEach(btn => btn.classList.remove('active'));
-        button.classList.add('active');
-  
-        const filterValue = button.getAttribute('data-filter');
-  
-        certificateCards.forEach(card => {
-          const cardCategory = card.getAttribute('data-category');
-          card.style.display = (filterValue === 'all' || cardCategory === filterValue) ? 'block' : 'none';
+        lazyImages.forEach(function(lazyImage) {
+            lazyImageObserver.observe(lazyImage);
         });
-      });
-    });
-  
-    // Search Functionality
-    searchInput.addEventListener('keyup', () => {
-      const searchValue = searchInput.value.toLowerCase();
-      certificateCards.forEach(card => {
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        card.style.display = title.includes(searchValue) ? 'block' : 'none';
-      });
-    });
-  });
-   
+    }
 
-    container.addEventListener('mouseleave', () => {
-      card.style.transform = 'rotateX(0deg) rotateY(0deg)';
+    // **Certificates Filtering and Search**
+    const certificateFilterButtons = document.querySelectorAll('#certificates .filter-btn');
+    const certificateCards = document.querySelectorAll('#certificates .certificate-card');
+    const certificateSearchInput = document.getElementById('certificate-search');
+
+    certificateFilterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            certificateFilterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            const filterValue = button.getAttribute('data-filter');
+
+            certificateCards.forEach(card => {
+                const cardCategory = card.getAttribute('data-category');
+                card.style.display = (filterValue === 'all' || cardCategory === filterValue) ? 'block' : 'none';
+            });
+        });
     });
-    document.addEventListener('DOMContentLoaded', function () {
-      // Project Filter Functionality
-      const projectFilterButtons = document.querySelectorAll('#projects .certificate-filters .filter-btn');
-      const projectCards = document.querySelectorAll('#projects .certificate-card');
-      const projectSearchInput = document.getElementById('project-search');
-  
-      projectFilterButtons.forEach(button => {
-          button.addEventListener('click', () => {
-              projectFilterButtons.forEach(btn => btn.classList.remove('active'));
-              button.classList.add('active');
-  
-              const filterValue = button.getAttribute('data-filter');
-  
-              projectCards.forEach(card => {
-                  const cardCategory = card.getAttribute('data-category');
-                  card.style.display = (filterValue === 'all' || cardCategory === filterValue) ? 'block' : 'none';
-              });
-          });
-      });
-  
-      // Project Search Functionality
-      projectSearchInput.addEventListener('keyup', () => {
-          const searchValue = projectSearchInput.value.toLowerCase();
-          projectCards.forEach(card => {
-              const title = card.querySelector('h3').textContent.toLowerCase();
-              card.style.display = title.includes(searchValue) ? 'block' : 'none';
-          });
-      });
-  });
+
+    certificateSearchInput.addEventListener('keyup', () => {
+        const searchValue = certificateSearchInput.value.toLowerCase();
+        certificateCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            card.style.display = title.includes(searchValue) ? 'block' : 'none';
+        });
+    });
+
+    // **Projects Filtering and Search**
+    const projectFilterButtons = document.querySelectorAll('#projects .projects-filter-btn');
+    const projectCards = document.querySelectorAll('#projects .project-card');
+    const projectSearchInput = document.getElementById('project-search');
+
+    projectFilterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            projectFilterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            const filterValue = button.getAttribute('data-filter');
+
+            projectCards.forEach(card => {
+                const cardCategories = card.getAttribute('data-category').split(',').map(cat => cat.trim());
+                card.style.display = (filterValue === 'all' || cardCategories.includes(filterValue)) ? 'block' : 'none';
+            });
+        });
+    });
+
+    projectSearchInput.addEventListener('keyup', () => {
+        const searchValue = projectSearchInput.value.toLowerCase();
+        projectCards.forEach(card => {
+            const title = card.querySelector('h3').textContent.toLowerCase();
+            card.style.display = title.includes(searchValue) ? 'block' : 'none';
+        });
+    });
+});
