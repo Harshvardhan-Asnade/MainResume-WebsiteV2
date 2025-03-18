@@ -1646,3 +1646,83 @@ body {
       font-size: 0.85rem;
   }
 }
+.linkedin-section {
+  padding: 6rem 1rem;
+  background: #000000;
+  color: #ffffff;
+  text-align: center;
+}
+
+.linkedin-posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.linkedin-post-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.linkedin-post-card:hover {
+  transform: translateY(-5px);
+  border-color: #1e90ff;
+  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.2);
+}
+
+.post-title {
+  font-size: 1.8rem;
+  max-width: 300px;
+  margin: 0 auto 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.post-description {
+  font-size: 0.9rem;
+  max-width: 300px;
+  margin: 0 auto 1.5rem;
+  color: #b3b3b3;
+}
+
+.post-link {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid #333;
+  background: #1e90ff;
+  color: white;
+  font-size: 0.9rem;
+  text-decoration: none;
+  border-radius: 25px;
+  margin-top: 1rem;
+  transition: all 0.3s ease;
+}
+
+.post-link:hover {
+  background: #1c86ee;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+
+.iframe-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 79.36%;
+  height: 0;
+  margin-bottom: 1rem;
+}
+
+.iframe-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
