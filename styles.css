@@ -1157,7 +1157,7 @@ body {
 }
 
 .skill-card {
-  background: rgba(2, 0, 32, 0.95);
+  background: #08041c;
   backdrop-filter: blur(12px);
   border-radius: 15px;
   padding: 1.5rem;
