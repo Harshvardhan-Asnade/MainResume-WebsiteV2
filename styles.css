@@ -1646,3 +1646,65 @@ body {
       font-size: 0.85rem;
   }
 }
+.linkedin-section {
+  padding: 6rem 1rem;
+  background: var(--color-background-start) url('Home.png');
+  color: var(--color-text);
+  line-height: 1.5;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.linkedin-posts-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.linkedin-post-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--color-border);
+  border-radius: var(--spacing-radius);
+  padding: 1.5rem;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.linkedin-post-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: 0 10px 30px rgba(30, 144, 255, 0.2);
+}
+
+.post-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.post-description {
+  font-size: 1rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.post-link {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid var(--color-border);
+  background: var(--color-primary);
+  color: white;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.post-link:hover {
+  background: var(--color-primary-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
