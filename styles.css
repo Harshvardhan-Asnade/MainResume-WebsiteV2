@@ -1646,72 +1646,64 @@ body {
       font-size: 0.85rem;
   }
 }
-/* Compact LinkedIn Section */
-.linkedin-section {
+/* LinkedIn Compact Section */
+.linkedin-compact {
   padding: 3rem 1rem;
   background: var(--color-background-start);
 }
 
-.linkedin-posts-grid {
+.linkedin-posts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1rem;
-  max-width: 800px;
+  max-width: 600px;
   margin: 1.5rem auto;
 }
 
-.linkedin-post-card {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid var(--color-border);
-  border-radius: 0.75rem;
-  overflow: hidden;
-  transition: transform 0.2s ease;
-}
-
-.linkedin-post-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--color-primary);
-}
-
-.linkedin-post-card iframe {
-  width: 100%;
-  border: none;
-}
-
-.post-footer {
-  padding: 1rem;
+.linkedin-post {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.post-footer span {
-  font-size: 0.9rem;
-  font-weight: 500;
-  color: var(--color-text);
-}
-
-.post-link {
-  color: var(--color-primary);
+  padding: 1rem;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--spacing-radius);
   text-decoration: none;
-  font-size: 0.85rem;
-  padding: 0.25rem 0.5rem;
-  border-radius: 0.5rem;
-  transition: all 0.2s ease;
+  transition: all 0.3s var(--transition-timing);
 }
 
-.post-link:hover {
-  background: rgba(30, 144, 255, 0.1);
+.linkedin-post:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(30, 144, 255, 0.1);
+}
+
+.linkedin-post span {
+  color: var(--color-text);
+  font-size: 0.9rem;
+}
+
+.post-arrow {
+  color: var(--color-primary);
+  margin-left: 0.5rem;
+  transition: transform 0.2s ease;
+}
+
+.linkedin-post:hover .post-arrow {
+  transform: translateX(3px);
 }
 
 @media (max-width: 768px) {
-  .linkedin-section {
+  .linkedin-compact {
       padding: 2rem 1rem;
   }
   
-  .linkedin-posts-grid {
-      grid-template-columns: 1fr;
-      max-width: 500px;
+  .linkedin-posts {
+      max-width: 400px;
   }
+}
+.subtitle2 {
+  font-size: 1.5rem;
+  color: var(--color-text-secondary);
+  margin-bottom: 2rem;
+  color: #1e2dfa;
 }
