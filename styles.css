@@ -1216,6 +1216,13 @@ body {
 .skill-item:hover img {
   filter: grayscale(0) drop-shadow(0 0 12px rgba(0, 80, 255, 0.7));
 }
+.skills-divider {
+    border: none;
+    height: 2px;
+    background-color: #ccc; /* Change to your desired color */
+    margin: 5px 0 10px;     /* Adjust spacing */
+    width: 100%;
+}
 
 .skill-item p {
   color: #a0c8ff;
