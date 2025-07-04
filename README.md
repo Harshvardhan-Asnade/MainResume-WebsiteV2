@@ -3,7 +3,7 @@
 
 ## 🌐 Live Deployment
 The resume is automatically deployed via GitHub Pages:  
-[**Live Website**](https://harshvardhan-asnade.github.io/MainResume-WebsiteV2/)  
+[**Live Website**](https://harshaiportfolio.vercel.app/)  
 
 ## 🚀 Getting Started
 
